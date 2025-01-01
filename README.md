@@ -36,4 +36,8 @@ sc start serviceBmpICO
 ```
 > [!NOTE] 
 > Based on RedefiningReality repo https://github.com/RedefiningReality/Cobalt-Strike  
-> I put respect on his name.
+> I put respect on his name.  
+
+
+> [!CAUTION] 
+> This is just a POC so you're nice you keep your hands in your pockets and chill unless it's your lab. <img src="./Images/chill-guy.gif" align="right" width="290" height="290" />  
