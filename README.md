@@ -1,5 +1,5 @@
 # RC-Obfuscator  
-Just an obfuscation technique in two formats  
+Just an obfuscation technique in a resource file in 2 possible formats   
 1. **ICO** - Conversion of a binary file into an ico file (without the header) and loading of this file with ntmapViewOfSection Technique.  
 2. **BITMAP** - Create a Bitmap file, inject the paylaod bin into the file and load it with ntmapViewOfSection Technique.  
 
