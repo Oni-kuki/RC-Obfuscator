@@ -35,7 +35,7 @@ std::vector<BYTE> decode(const std::string& hex) {
     for (size_t i = 0; i < hex.length(); i += 2) {
         std::string hex_byte = hex.substr(i, 2);
 
-        // Remplacer les lettres 'g-p' par les chiffres hexadécimaux '0-9'
+        // Replace the letter to hex
         for (char& c : hex_byte)
             if (c >= 'g' && c <= 'p')
                 c = '0' + (c - 'g');
