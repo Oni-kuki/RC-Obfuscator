@@ -44,28 +44,28 @@ std::string resource()
 {   // Find the ressource
     HRSRC hRsrc = FindResource(NULL, MAKEINTRESOURCE(IDB_BITMAP1), RT_BITMAP);
     if (!hRsrc) {
-        std::cerr << "Erreur : Ressource ICO non trouvée dans l'exécutable." << std::endl;
+        std::cerr << "Error : Resource BMP notre find in executable." << std::endl;
         return "";
     }
 
     // Load the rc
     HGLOBAL hGlobal = LoadResource(NULL, hRsrc);
     if (!hGlobal) {
-        std::cerr << "Erreur : Impossible de charger la ressource." << std::endl;
+        std::cerr << "Error : Impossible to load the ressource file." << std::endl;
         return "";
     }
 
     // Lock the rc and obtain the pointer
     PVOID ptr = LockResource(hGlobal);
     if (!ptr) {
-        std::cerr << "Erreur : Impossible de verrouiller la ressource." << std::endl;
+        std::cerr << "Error : impossible to lock" << std::endl;
         return "";
     }
 
     // file size
     SIZE_T size = SizeofResource(NULL, hRsrc);
     if (size == 0) {
-        std::cerr << "Erreur : La taille de la ressource est nulle." << std::endl;
+        std::cerr << "Error : size of ressource file null." << std::endl;
         return "";
     }
 
@@ -83,7 +83,7 @@ std::string extractHexDataFromString(const std::string& data) {
     size_t end_pos = data.find(delimiter_end);
 
     if (start_pos == std::string::npos || end_pos == std::string::npos) {
-        std::cerr << "Délimiteurs non trouvés dans la ressource." << std::endl;
+        std::cerr << "delimiter not find." << std::endl;
         return "";
     }
 
