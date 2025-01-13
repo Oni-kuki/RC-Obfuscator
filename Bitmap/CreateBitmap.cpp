@@ -49,7 +49,7 @@ void createSmallerBMP(const std::string& filename, int width, int height) {
             int index = y * rowSize + x * 3;
 
             // Dynamic colors
-            uint8_t red = static_cast<uint8_t>((sin(x * 0.2) + 1) * 127);   // sinus (fréquence ajustée)
+            uint8_t red = static_cast<uint8_t>((sin(x * 0.2) + 1) * 127);   // sinus 
             uint8_t green = static_cast<uint8_t>((cos(y * 0.2) + 1) * 127); //  cosinus
             uint8_t blue = static_cast<uint8_t>((x + y) % 256);
 
@@ -75,7 +75,7 @@ void createSmallerBMP(const std::string& filename, int width, int height) {
     // write 
     std::ofstream file(filename, std::ios::binary);
     if (!file) {
-        std::cerr << "Erreur : impossible de créer le fichier " << filename << "\n";
+        std::cerr << "Error : impossible to create file" << filename << "\n";
         return;
     }
 
@@ -84,7 +84,7 @@ void createSmallerBMP(const std::string& filename, int width, int height) {
     file.write(reinterpret_cast<char*>(pixels.data()), pixels.size());
 
     file.close();
-    std::cout << "Fichier BMP réduit créé : " << filename << "\n";
+    std::cout << "BMP file created : " << filename << "\n";
 }
 
 int main() {
