@@ -45,7 +45,7 @@ int main(int argc, char* argv[]) {
     // 
     std::ifstream ico(ico_file, std::ios::binary);
     if (!ico) {
-        std::cerr << "Erreur lors de l'ouverture du fichier Bitmap." << std::endl;
+        std::cerr << "Error : can't open the bitmap file." << std::endl;
         return 1;
     }
 
@@ -57,7 +57,7 @@ int main(int argc, char* argv[]) {
 
     std::ifstream bin(bin_file, std::ios::binary);
     if (!bin) {
-        std::cerr << "Erreur lors de l'ouverture du fichier binaire." << std::endl;
+        std::cerr << "Error : can't open the bin file" << std::endl;
         return 1;
     }
 
@@ -81,7 +81,7 @@ int main(int argc, char* argv[]) {
 
     std::ofstream output(output_file, std::ios::binary);
     if (!output) {
-        std::cerr << "Erreur lors de l'ouverture du fichier de sortie." << std::endl;
+        std::cerr << "Error : can't open the output file" << std::endl;
         return 1;
     }
 
@@ -92,7 +92,7 @@ int main(int argc, char* argv[]) {
 
     output.close();
 
-    std::cout << "Le fichier Bitmap a été modifié et sauvegardé sous " << output_file << std::endl;
+    std::cout << "Bitmap was modified and save it" << output_file << std::endl;
 
     return 0;
 }
